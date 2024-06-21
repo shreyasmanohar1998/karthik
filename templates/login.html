@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="loginform">
+  <form method="POST" >
+    <h2>Login </h2><br/>
+    {% csrf_token %}
+    <div class="mb-1">
+      <label for="exampleFormControlInput1" class="form-label">UserName:</label>
+      <input type="text" class="form-control" name="username" id="exampleFormControlInput1" placeholder="UserName"><br />
+    </div>
+    <div class="mb-2">
+      <label for="exampleFormControlInput2" class="form-label">Password:</label>
+      <input type="password" class="form-control" name="password" id="exampleFormControlInput1" placeholder="Password"><br />
+    </div>
+    <input type="submit" name="submit" value="submit" />
+</div>
+{% endblock %}
+
+
